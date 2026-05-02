@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artsy Alchemist | The Desi Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">CANVAS N CLOVE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pantry">Pantry</a></li>
+            <li><a href="#recipes">Formulas</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. COVER PAGE (Video Background) -->
+    <header id="home" class="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-spices-and-herbs-on-a-wooden-table-34584-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="hero-text">
+            <h1>Culinaria</h1>
+            <p>For your tastebuds</p>
+            <div class="audio-box">
+                <small></small>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <a href="#pantry" class="cta-button">Open the Vault</a>
+        </div>
+    </header>
+
+    <!-- 2. PANTRY SECTION (Image Background) -->
+    <section id="pantry" class="pantry-section">
+        <div class="pantry-overlay"></div>
+        <div class="content-wrapper">
+            <h2 class="section-title">The Grand Pantry</h2>
+            <div class="form-grid">
+                <!-- North Ingredients -->
+                <div class="category">
+                    <h3>North Essentials</h3>
+                    <label><input type="checkbox" class="ing-check" value="paneer"> Paneer</label>
+                    <label><input type="checkbox" class="ing-check" value="palak"> Palak (Spinach)</label>
+                    <label><input type="checkbox" class="ing-check" value="aloo"> Aloo (Potato)</label>
+                    <label><input type="checkbox" class="ing-check" value="gobi"> Gobi (Cauliflower)</label>
+                    <label><input type="checkbox" class="ing-check" value="atta"> Aata (Wheat)</label>
+                </div>
+                <!-- South Ingredients -->
+                <div class="category">
+                    <h3>South Essentials</h3>
+                    <label><input type="checkbox" class="ing-check" value="coconut"> Fresh Coconut</label>
+                    <label><input type="checkbox" class="ing-check" value="curry-leaves"> Curry Leaves</label>
+                    <label><input type="checkbox" class="ing-check" value="tamarind"> Tamarind</label>
+                    <label><input type="checkbox" class="ing-check" value="rice"> Rice Batter</label>
+                    <label><input type="checkbox" class="ing-check" value="mustard"> Mustard Seeds</label>
+                </div>
+                <!-- Street & Spices -->
+                <div class="category">
+                    <h3>Alchemy Box</h3>
+                    <label><input type="checkbox" class="ing-check" value="chana"> Kabuli Chana</label>
+                    <label><input type="checkbox" class="ing-check" value="turmeric"> Turmeric</label>
+                    <label><input type="checkbox" class="ing-check" value="besan"> Besan (Gram Flour)</label>
+                    <label><input type="checkbox" class="ing-check" value="garlic"> Garlic</label>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button onclick="filterRecipes()" class="alchemist-btn">Reveal Formulas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. RECIPES SECTION -->
+    <section id="recipes" class="section">
+        <h2 class="section-title">Matching Formulas</h2>
+        <div class="recipe-grid" id="recipe-grid">
+            
+            <!-- South Indian -->
+            <details class="recipe-card" data-ingredients="rice,coconut,curry-leaves">
+                <summary>Traditional Coconut Rice</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Sauté mustard seeds and curry leaves. Mix fresh coconut with steamed rice.</p>
+                </div>
+            </details>
+
+            <details class="recipe-card" data-ingredients="rice,tamarind,mustard">
+                <summary>Puliogare (Tamarind Rice)</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Cook rice with tamarind pulp, roasted peanuts, and green chilies.</p>
+                </div>
+            </details>
+
+            <!-- North Indian -->
+            <details class="recipe-card" data-ingredients="paneer,palak,garlic">
+                <summary>Lasooni Palak Paneer</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Blanch palak, temper with heavy garlic, and add soft paneer cubes.</p>
+                </div>
+            </details>
+
+            <details class="recipe-card" data-ingredients="chana,garlic,turmeric">
+                <summary>Pindi Chole</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Slow cook chana with dark tea-leaf infusion and roasted spices.</p>
+                </div>
+            </details>
+
+            <details class="recipe-card" data-ingredients="aloo,gobi,turmeric">
+                <summary>Aloo Gobi Adraki</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Stir-fry aloo and gobi with turmeric and ginger slivers.</p>
+                </div>
+            </details>
+
+            <details class="recipe-card" data-ingredients="besan,aloo">
+                <summary>Aloo Pakora</summary>
+                <div class="recipe-content">
+                    <p><strong>Prep:</strong> Slice aloo, dip in spiced besan batter, and deep fry until gold.</p>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+   
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@artsyalchemist.com</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message..." rows="4"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Artsy Alchemist Collective</p>
+    </footer>
+
+    <script>
+        function filterRecipes() {
+            const checkboxes = document.querySelectorAll('.ing-check:checked');
+            const selected = Array.from(checkboxes).map(cb => cb.value);
+            const cards = document.querySelectorAll('.recipe-card');
+
+            cards.forEach(card => {
+                const needs = card.getAttribute('data-ingredients').split(',');
+                // If any selected ingredient is in the recipe's list, show it
+                const match = selected.some(ing => needs.includes(ing));
+                
+                if (match || selected.length === 0) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+            // Scroll to recipes after clicking
+            document.getElementById('recipes').scrollIntoView();
+        }
+    </script>
+</body>
+</html>
